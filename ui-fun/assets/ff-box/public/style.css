@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+/* Default style */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Body background style */
+body {
+	display: flex;
+	justify-content: left;
+	align-items: left;
+	min-height: 100vh;
+	background: linear-gradient(180deg, #000000, #999999);
+	font-family: 'Press Start 2P', sans-serif, system-ui;
+}
+
+/* Style for the entire control-panel class */
+.control-panel {
+	display: flex;
+	position: absolute;
+	width: 100%;
+	height: 20%;
+	left: 0;
+	bottom: 0;
+	background: black;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Border with border image from FFVII*/
+.ff-border {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	border: 10px solid black;
+	border-image-source: url("assets/ffvii-frame.png");
+	border-image-slice: 13;
+}
+
+/* panel style with beveled corners */
+.ff-panel {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	background: linear-gradient(315deg, #000000, #0000ff);
+	cursor: url(assets/ffvii-finger.svg), progress;
+}
+
+/* character-list style */
+.character-list {
+	border-radius: 10%;
+	border-color: #ffffff;
+	border: 1px;
+	color: #ffffff;
+	list-style: none;
+	margin-left: 5%;
+}
+
+.panel-label {
+	font-family: 'Press Start 2P', sans-serif, system-ui;
+	font-size: 10px;
+	margin-top: 5%;
+}
+
+/* Pop-up action-menu style */
+.action-menu {
+	display: none;
+	position: absolute;
+	z-index: -10;
+}
+
+/* Style for action-list items within the action menu */
+.action-list {
+	z-index: -10;
+}
+
+/* Style for the right menu that has status information */
+.right-status-view {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	right: 0;
+	background: linear-gradient(315deg, #000000, #0000ff);
+	border: 4px solid white;
+	border-radius: 3%;
+}
+
+/* Status list style */
+.status-list {
+	margin-left: 2%;
+	height: 100%;
+	color: #ffffff;
+	list-style: none;
+}
+
+/* Styles for individual status-list entries */
+.list-item {
+	font-family: sans-serif, system-ui;
+	font-size: 20px;
+}
+
+.list-item-bold {
+	font-family: sans-serif, system-ui;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/* end */
