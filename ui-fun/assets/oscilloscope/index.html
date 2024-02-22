@@ -1,15 +1,77 @@
 <!DOCTYPE html>
 <html>
 
-<head></head>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <!--
+    <style>
+        #my-svg-symbols {
+            display: none;
+        }
+    </style>
+    <svg id="my-svg-symbols" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="my-symbol-name" viewBox="0 0 16 16">
+            version="1.1"
+            id="svg1"
+            width="16"
+            height="16"
+            viewBox="0 0 16.000001 16"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:svg="http://www.w3.org/2000/svg">
+            <defs id="defs1">
+                <linearGradient id="linearGradient9">
+                    <stop style="stop-color:#9f8b8c;stop-opacity:1;" offset="0" id="stop9" />
+                    <stop style="stop-color:#9c7f74;stop-opacity:1;" offset="1" id="stop10" />
+                </linearGradient>
+                <linearGradient xlink:href="#linearGradient9" id="linearGradient10" x1="425.92191" y1="705.84656"
+                    x2="480.47256" y2="705.84656" gradientUnits="userSpaceOnUse"
+                    gradientTransform="matrix(-0.11689383,-0.11689447,0.1171625,-0.11716313,383.47635,801.55204)" />
+            </defs>
+            <g id="g1" transform="translate(-405.201,-657.87679)" style="display:inline">
+                <path id="rect9"
+                    style="opacity:1;fill:url(#linearGradient10);stroke:#000000;stroke-width:0.166186;stroke-dasharray:none"
+                    d="m 417.212,657.961 c -1.43,-0.03 -3.019,0.603 -3.971,1.556 l -6.402,6.401 c -1.523,1.524 -2.231,4.679 -0.711,6.199 l 0.831,0.831 c 1.52,1.52 4.675,0.812 6.199,-0.712 l 6.401,-6.401 c 1.523,-1.524 2.231,-4.679 0.711,-6.199 l -0.831,-0.831 c -0.57,-0.57 -1.37,-0.827 -2.227,-0.844 z" />
+            </g>
+        </symbol>
+    </svg>
+-->
+</head>
 
 <body>
-<img src="oscilloscope.jpg" width="50%">
-<img src="oscilloscope-vButton.jpg">
-<img src="oscilloscope-vButton-drawn.svg">
-<img src="oscilloscope-hButton-drawn.svg">
-<img src="oscilloscope-L45-drawn.svg">
-<img src="oscilloscope-R45-drawn.svg">
+
+    <p>Img</p>
+    <img id="img1" class="oscope-button" src="oscilloscope-R45-drawn-plain_16x16.svg">
+
+    <!--
+    <p>SVG image</p>
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <image id="svg1" href="oscilloscope-R45-drawn-plain.svg" onclick="window.open(this.src)" pointer-events="visiblePainted"
+            cursor="pointer" />
+    </svg>
+    -->
+
+    <p>Object</p>
+    <object id="obj1" class="oscope-button" data="oscilloscope-R45-drawn-plain.svg"></object>
+
+    <button onclick="setupSVGs()">Click me!</button>
+    <script type="text/javascript">
+        function setupSVGs() {
+            var objs = document.getElementById('obj1');
+
+            console.log(objs);
+            document.getElementById('obj1').onclick = openWindow;
+            console.log(objs);
+            var img1 = document.getElementById('img1');
+            img1.addEventListener('click',openWindow);
+        }
+
+        function openWindow() {
+            console.log("Opening window...");
+            window.open("https://news.google.com");
+        }
+    </script>
+
 </body>
 
 </html>
