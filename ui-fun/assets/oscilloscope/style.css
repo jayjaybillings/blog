@@ -1,7 +1,5 @@
-.oscope-r45-button {
-    pointer-events: visibleFill;
+.oscope-button {
     width: 200px;
     height: 200px;
-    background: url("oscilloscope-R45-drawn.svg") center no-repeat;
-    fill: none;
+    background: blue;
 }
