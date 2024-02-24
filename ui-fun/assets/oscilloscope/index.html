@@ -58,7 +58,7 @@
     <script type="text/javascript">
         function setupSVGs() {
             var obj = document.getElementById('obj1');
-            var obj_svg = obj.contentDocument.getElementById('svg1');
+            var obj_svg = obj.contentDocument.querySelector('svg > g');
             obj_svg.addEventListener('click',openWindow);
             console.log(obj_svg);
             //document.getElementById("img1").addEventListener('click',openWindow);
