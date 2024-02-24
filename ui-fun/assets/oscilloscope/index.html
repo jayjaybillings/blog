@@ -52,18 +52,16 @@
     -->
 
     <p>Object</p>
-    <object id="obj1" class="oscope-button" data="oscilloscope-R45-drawn-plain.svg"></object>
+    <div><object id="obj1" type="image/svg+xml" class="oscope-button" data="oscilloscope-R45-drawn-plain_16x16.svg"></object></div>
 
     <button onclick="setupSVGs()">Click me!</button>
     <script type="text/javascript">
         function setupSVGs() {
-            var objs = document.getElementById('obj1');
-
-            console.log(objs);
-            document.getElementById('obj1').onclick = openWindow;
-            console.log(objs);
-            var img1 = document.getElementById('img1');
-            img1.addEventListener('click',openWindow);
+            var obj = document.getElementById('obj1');
+            var obj_svg = obj.contentDocument.getElementById('svg1');
+            obj_svg.addEventListener('click',openWindow);
+            console.log(obj_svg);
+            //document.getElementById("img1").addEventListener('click',openWindow);
         }
 
         function openWindow() {

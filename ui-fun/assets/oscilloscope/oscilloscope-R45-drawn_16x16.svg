@@ -12,6 +12,7 @@
    inkscape:export-filename="oscilloscope-R45-drawn-plain_16x16.svg"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
+   pointer-events="none"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -27,7 +28,7 @@
      inkscape:pagecheckerboard="true"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="6.2629457"
-     inkscape:cx="9.2608179"
+     inkscape:cx="9.1809833"
      inkscape:cy="14.2904"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
@@ -70,7 +71,8 @@
      style="display:inline">
     <path
        id="rect9"
-       style="opacity:1;fill:url(#linearGradient10);stroke:#000000;stroke-width:0.166186;stroke-dasharray:none"
-       d="m 417.212,657.961 c -1.43,-0.03 -3.019,0.603 -3.971,1.556 l -6.402,6.401 c -1.523,1.524 -2.231,4.679 -0.711,6.199 l 0.831,0.831 c 1.52,1.52 4.675,0.812 6.199,-0.712 l 6.401,-6.401 c 1.523,-1.524 2.231,-4.679 0.711,-6.199 l -0.831,-0.831 c -0.57,-0.57 -1.37,-0.827 -2.227,-0.844 z" />
+       style="stroke-dasharray:none;stroke-width:0.166186;stroke:#000000;fill:url(#linearGradient10);opacity:1"
+       d="m 417.212,657.961 c -1.43,-0.03 -3.019,0.603 -3.971,1.556 l -6.402,6.401 c -1.523,1.524 -2.231,4.679 -0.711,6.199 l 0.831,0.831 c 1.52,1.52 4.675,0.812 6.199,-0.712 l 6.401,-6.401 c 1.523,-1.524 2.231,-4.679 0.711,-6.199 l -0.831,-0.831 c -0.57,-0.57 -1.37,-0.827 -2.227,-0.844 z"
+       pointer-events="fill" />
   </g>
 </svg>
