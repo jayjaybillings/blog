@@ -1,10 +1,69 @@
 .oscope-button {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     background: blue;
 }
 
 .oscope-frame {
     display: grid;
-    gap: 1.5rem;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    'frame-left'
+    'frame-right';
+    aspect-ratio: 2 / 1; /* Based on measurement */
+}
+
+.oscope-frame-left {
+    display: grid;
+    grid-template-columns: 1.5fr 7.5fr 1fr;
+    grid-template-areas:
+    'frame-left-top'
+    'frame-left-right'
+    'frame-left-bottom'
+    'frame-left-left'
+    'frame-left-screen'
+}
+
+.oscope-screen-top {
+    grid-area: frame-left-top;
+    background-color: beige;
+}
+
+.oscope-screen-right {
+    grid-area: frame-left-right;
+    background-color: beige;
+}
+
+.oscope-screen-bottom {
+    grid-area: frame-left-bottom;
+    background-color: beige;
+}
+
+.oscope-screen-left {
+    grid-area: frame-left-left;
+    background-color: beige;
+}
+
+.oscope-screen {
+    grid-area: frame-left-screen;
+    width: 100%;
+    height: 100%;
+    background-color: beige;
+    background-image: url('oscilloscope-screen-drawn_plain.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 50em) {
+    .oscope-frame {
+        grid-template-areas:
+        'frame-left frame-right';
+    }
+
+    .oscope-frame-left {
+        grid-template-areas:
+        'frame-left-top frame-left-top frame-left-top'
+        'frame-left-left frame-left-screen frame-left-right'
+        'frame-left-left frame-left-bottom frame-left-right'
+    }
 }

@@ -3,23 +3,16 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
 
 <body>
-
-    <p>Object</p>
-    <div><object id="obj1" type="image/svg+xml" class="oscope-button" data="oscilloscope-R45-drawn_plain.svg"></object></div>
-    <div><object id="obj2" type="image/svg+xml" class="oscope-button" data="oscilloscope-vButton-drawn_plain.svg"></object></div>
-    <div><object id="obj3" type="image/svg+xml" class="oscope-button" data="oscilloscope-L45-drawn_plain.svg"></object></div>
-    <div><object id="obj4" type="image/svg+xml" class="oscope-button" data="oscilloscope-hButton-drawn_plain.svg"></object></div>
-
     <button onclick="setupSVGs()">Click me!</button>
     <script type="text/javascript">
         function setupSVGs() {
             var obj = document.getElementById('obj1');
             var obj_svg = obj.contentDocument.querySelector('svg > g');
-            obj_svg.addEventListener('click',openWindow);
+            obj_svg.addEventListener('click', openWindow);
             console.log(obj_svg);
             //document.getElementById("img1").addEventListener('click',openWindow);
         }
@@ -34,15 +27,33 @@
     <div class="oscope-frame">
         <!-- Power, screen and screen controls -->
         <div class="oscope-frame-left">
-            <div class="oscope-screen-top">c</div>
-            <div class="oscope-screen-right">d</div>
-            <div class="oscope-screen-bottom">e</div>
-            <div class="oscope-screen-left">f</div>
-            <div class="oscope-screen">g</div>
-            a
+            <!-- Top bar with logo near the screen -->
+            <div class="oscope-screen-top">top</div>
+            <!-- Left vertical column near screen-->
+            <div class="oscope-screen-left">
+                <object id="obj3" type="image/svg+xml" class="oscope-button"
+                    data="oscilloscope-L45-drawn_plain.svg"></object>
+            </div>
+            <div class="oscope-screen">
+                <!--Nothing here. The background image is set in the CSS where 
+                    its size and other properties can be controlled because 
+                    importing here as an object is limiting. -->
+            </div>
+            <!-- Right vertical column next to screen with clear button -->
+            <div class="oscope-screen-right">
+                <object id="obj1" type="image/svg+xml" class="oscope-button"
+                    data="oscilloscope-R45-drawn_plain.svg"></object>
+                <object id="obj2" type="image/svg+xml" class="oscope-button"
+                    data="oscilloscope-vButton-drawn_plain.svg"></object>
+            </div>
+            <!-- Bottom buttton row -->
+            <div class="oscope-screen-bottom">
+                <object id="obj4" type="image/svg+xml" class="oscope-button"
+                    data="oscilloscope-hButton-drawn_plain.svg"></object>
+            </div>
         </div>
         <!-- Where all the buttons are-->
-        <div class="oscope-frame-right">b</div>
+        <div class="oscope-frame-right">right frame</div>
     </div>
 
 </body>
