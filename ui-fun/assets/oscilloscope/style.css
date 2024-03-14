@@ -1,69 +1,145 @@
-.oscope-button {
-    width: 100px;
-    height: 100px;
+.oscope-button-horizontal {
+    /* Button height based on measurements of relative size on case */
+    width: 2.90dvw;
+    height: 3.31dvh;
+    background: blue;
+}
+
+.oscope-button-vertical {
+    /* Button height based on measurements of relative size on case */
+    width: 1.58dvw;
+    height: 6.10dvh;
+    background: blue;
+}
+
+.oscope-button-tilted {
+    /* Button height based on measurements of relative size on case */
+    width: 2.90dvw;
+    height: 6.10dvh;
     background: blue;
 }
 
 .oscope-frame {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
-    'frame-left'
-    'frame-right';
-    aspect-ratio: 2 / 1; /* Based on measurement */
+        'frame-left'
+        'frame-right';
 }
 
 .oscope-frame-left {
     display: grid;
-    grid-template-columns: 1.5fr 7.5fr 1fr;
+    width: 55.3dvw;
     grid-template-areas:
-    'frame-left-top'
-    'frame-left-right'
-    'frame-left-bottom'
-    'frame-left-left'
-    'frame-left-screen'
+        'frame-left-top'
+        'frame-left-right'
+        'frame-left-bottom'
+        'frame-left-left'
+        'frame-left-screen';
+    position: relative;
+}
+
+.oscope-frame-left-background {
+    width: 55.3dvw;
+    height: 100dvh;
+    -o-object-fit: fill;
+    object-fit: fill;
+    position: absolute;
+    z-index: -1;
+}
+
+.oscope-frame-right {
+    display: grid;
+    width: 44.7dvw;
 }
 
 .oscope-screen-top {
+    /* Button height based on measurements of relative size on case */
+    height: 16.6dvh;
     grid-area: frame-left-top;
-    background-color: beige;
 }
 
 .oscope-screen-right {
+    /* Button height based on measurements of relative size on case */
+    width: 5.3dvw;
     grid-area: frame-left-right;
-    background-color: beige;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.oscope-screen-right-spacer-top {
+    /* This is the whitespace below the buttons on the right side of the screen. */
+    height: 11.7dvh;
+}
+
+.oscope-screen-right-spacer-bottom {
+    /* This is the whitespace below the buttons on the right side of the screen. */
+    height: 8.3dvh;
 }
 
 .oscope-screen-bottom {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    /* Button height based on measurements of relative size on case */
+    height: 16.6dvh;
     grid-area: frame-left-bottom;
-    background-color: beige;
+    justify-items: center;
+    align-items: center;
 }
 
 .oscope-screen-left {
+    display: flex;
     grid-area: frame-left-left;
-    background-color: beige;
+    /* Button height based on measurements of relative size on case */
+    width: 8dvw;
+    justify-content: center;
+    align-items: end;
+}
+
+.oscope-screen-verticle-buttons {
+    display: grid;
+    height: 46dvh;
+    justify-items: center;
+    align-items: end;
+}
+
+.oscope-screen-clear-menu {
+    display: flex;
+    justify-content: center;
+    align-items: end;
 }
 
 .oscope-screen {
     grid-area: frame-left-screen;
-    width: 100%;
-    height: 100%;
-    background-color: beige;
-    background-image: url('oscilloscope-screen-drawn_plain.svg');
-    background-size: cover;
+    /* Button height based on measurements of relative size on case */
+    width: 42dvw;
+    height: 67dvh;
+    /* FIXME!
+    
+    Problem here! - The grey shows through on the corners and the corners
+    have the wrong shape on the bottom (not slanted). Would also look better
+    curved instead of cut.
+
+    Fixing this will likely require more drawing in Inkscape. */
+   /* background-color: grey;
+    background-image: url('oscilloscope-screen-clock_plain.svg');
+    background-size: contain;
     background-repeat: no-repeat;
+    border: 10px solid red;
+    border-image-slice: 6;
+    border-image-source: url("oscilloscope-screen-black_plain.png");*/
 }
 
 @media (min-width: 50em) {
     .oscope-frame {
         grid-template-areas:
-        'frame-left frame-right';
+            'frame-left frame-right';
     }
 
     .oscope-frame-left {
         grid-template-areas:
-        'frame-left-top frame-left-top frame-left-top'
-        'frame-left-left frame-left-screen frame-left-right'
-        'frame-left-left frame-left-bottom frame-left-right'
+            'frame-left-top frame-left-top frame-left-top'
+            'frame-left-left frame-left-screen frame-left-right'
+            'frame-left-left frame-left-bottom frame-left-right'
     }
 }
