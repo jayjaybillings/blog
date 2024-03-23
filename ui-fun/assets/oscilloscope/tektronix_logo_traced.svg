@@ -4,11 +4,14 @@
 <svg
    version="1.1"
    id="svg1"
-   width="121.99972"
-   height="24.902"
-   viewBox="0 0 121.99972 24.902001"
+   width="112.99998"
+   height="21.367386"
+   viewBox="0 0 112.99998 21.367386"
    sodipodi:docname="tektronix_logo_traced.svg"
    inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   inkscape:export-filename="tektronix_logo_traced_plain.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -69,9 +72,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="true"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="12.775644"
-     inkscape:cx="59.644741"
-     inkscape:cy="33.657793"
+     inkscape:zoom="4.5168724"
+     inkscape:cx="54.794552"
+     inkscape:cy="30.109329"
      inkscape:window-width="1920"
      inkscape:window-height="1008"
      inkscape:window-x="0"
@@ -81,7 +84,8 @@
   <g
      inkscape:groupmode="layer"
      inkscape:label="Image"
-     id="g1">
+     id="g1"
+     transform="translate(-4.8791206,-3.6104459)">
     <path
        style="fill:#284a70;fill-opacity:1;stroke-width:0.0999203"
        d="m 5.0042586,3.6104459 -0.125138,3.691583 2.315061,0.06257 0.688261,-2.315061 h 2.7530464 l 0.125138,11.8255811 -0.312846,0.625693 -0.312846,0.437984 -0.3754154,0.125138 h -1.126246 v 1.564231 l 9.8233664,0.06257 -0.06257,-1.501662 -1.188815,-0.06257 -0.625693,-0.312846 -0.250276,-0.688261 -0.250277,-12.0758581 3.128461,0.06257 0.625691,2.189922 2.064785,0.06257 v -3.629015 z"

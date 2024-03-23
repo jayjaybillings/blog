@@ -1,32 +1,7 @@
-.oscope-screen-right {
-    /* Button height based on measurements of relative size on case */
-    width: 5.3%;
-    grid-area: frame-left-right;
-    display: grid;
-    grid-template-columns: 1fr;
-    position: right;
-}
 
-.oscope-screen-right-spacer-top {
-    /* This is the whitespace below the buttons on the right side of the screen. */
-    height: 11.7dvh;
-    position: absolute
-}
 
-.oscope-screen-right-spacer-bottom {
-    /* This is the whitespace below the buttons on the right side of the screen. */
-    height: 8.3dvh;
-}
 
-.oscope-screen-bottom {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    /* Button height based on measurements of relative size on case */
-    height: 16.6dvh;
-    grid-area: frame-left-bottom;
-    justify-items: center;
-    align-items: center;
-}
+
 
 .oscope-screen-left {
     display: flex;
@@ -37,18 +12,9 @@
     align-items: end;
 }
 
-.oscope-screen-verticle-buttons {
-    display: grid;
-    height: 46dvh;
-    justify-items: center;
-    align-items: end;
-}
 
-.oscope-screen-clear-menu {
-    display: flex;
-    justify-content: center;
-    align-items: end;
-}
+
+
 
 .oscope-screen {
     grid-area: frame-left-screen;
@@ -85,45 +51,6 @@
     }
 }
 
-.oscope-screen-top {
-    grid-area: frame-left-top;
-    /* This sets the columns for the grid of text elements inside this. */
-    display: grid;
-    grid-template-columns: 0.125fr 2.75fr 0.125fr;
-    position: absolute;
-    margin: 2.4% 17.5% 2.4% 8.75%;
-}
 
-.oscope-screen-top-left-cap {
-    background-color: #A3A7A0;
-    border-radius: 10% 0 0 10%;
-}
 
-.oscope-screen-top-right-cap {
-    background-color: #A3A7A0;
-    border-radius: 0 10% 10% 0;
-}
 
-.oscope-screen-top-content {
-    /* This sets the columns for the grid of text elements inside this. */
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    position: center;
-    background-color: #A3A7A0;
-}
-
-.oscope-screen-top-model {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.oscope-screen-top-model-type {
-    font-size: 0.8em;
-    width: 15em;
-}
-
-.oscope-screen-top-model-frequencies {
-    font-size: 0.8em;
-    margin-left: auto;
-    margin-right: 1em;
-}

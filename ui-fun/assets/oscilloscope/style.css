@@ -35,34 +35,161 @@
 
 .oscope-frame-left {
     grid-area: frame-left;
-    position: absolute;/*
     display: grid;
+    grid-template-columns: 0.42fr 2.28fr 0.30fr;
+    grid-template-rows: 
+        0.51fr 
+        1.98fr 
+        0.51fr;
     grid-template-areas:
-        'frame-left-top';
-        'frame-left-right'
-        'frame-left-bottom'
-        'frame-left-left'
-        'frame-left-screen';*/
+        'frame-left-top frame-left-top frame-left-top'
+        'frame-left-left frame-left-screen frame-left-right'
+        'frame-left-left frame-left-bottom frame-left-right';
     background-color: #b09879;
     border-radius: 5%;
+    height: 100%;
+    position: relative;
 }
 
 /* This is a pseudo element that adds the shade and bevel on the inner rim of
 the frame around the screen. */
 .oscope-frame-left:after {
-    content: "";
+    content: "fuck";
     background-color: #ac8f6c;
-    position: absolute;
     inset: 11.5% 6.5% 11% 6.5%;
     border-radius: 5%;
+    position: absolute;
 }
+
+.oscope-frame-left-top {
+    grid-area: frame-left-top;
+    /* This sets the columns for the grid of text elements inside this. */
+    display: grid;
+    grid-template-columns: 0.125fr 2.75fr 0.125fr;
+    grid-template-rows: 0.4fr;
+    margin: 2.4% 8.75% 0 8.75%;
+}
+
+/* Left end cap with rounded corners */
+.oscope-frame-left-top-left-cap {
+    background-color: #A3A7A0;
+    border-radius: 15% 0 0 15%;
+}
+
+.oscope-frame-left-top-content {
+    /* This sets the columns for the grid of text elements inside this. */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #A3A7A0;
+    color: #63655F;
+}
+
+.oscope-frame-left-top-logo {
+    display: grid;
+    align-self: center;
+    margin: 0.8em 0 0 0;
+}
+
+.tektronix_logo {
+    height: 1.8em;
+}
+
+.oscope-frame-left-top-model {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em;
+    align-self: center;
+}
+
+.oscope-frame-left-top-model-number {
+    display: grid;
+    justify-content: end;
+    align-self: center;
+    width: 8em;
+    font-family: Georgia, Garamond, serif;
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+.oscope-frame-left-top-model-type {
+    font-size: 0.7em;
+    width: 15em;
+    display: grid;
+    align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.oscope-frame-left-top-model-frequencies {
+    font-size: 0.7em;
+    margin-left: auto;
+    margin-right: 1em;
+    display: grid;
+    align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Right end cap with rounded corners */
+.oscope-frame-left-top-right-cap {
+    background-color: #A3A7A0;
+    border-radius: 0 15% 15% 0;
+}
+
+.oscope-frame-left-left {
+    grid-area: frame-left-left;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.oscope-frame-left-screen {
+    grid-area: frame-left-screen;
+    content: "";
+}
+
+.oscope-frame-left-right {
+    grid-area: frame-left-right;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.oscope-frame-left-right-spacer-top {
+    /* This is the whitespace below the buttons on the right side of the screen. */
+    content: "";
+}
+
+.oscope-frame-left-verticle-buttons {
+    display: grid;
+    justify-items: center;
+    align-items: end;
+}
+
+.oscope-frame-left-right-spacer-bottom {
+    /* This is the whitespace below the buttons on the right side of the screen. */
+    content: "";
+}
+
+.oscope-frame-left-clear-menu {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.oscope-frame-left-bottom {
+    grid-area: frame-left-bottom;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+/* Start! --- Right side */
 
 .oscope-frame-right {
     /* Not yet implemented */
     display: grid;
-    position: absolute;
     grid-area: frame-right;
-    justify-self: right;
+    justify-self: center;
+    background-color: gray;
+    height: 100%;
+    width: 100%;
 }
-
-
