@@ -1,0 +1,35 @@
+% Copyright 2024- Jay Jay Billings. Some rights reserved.
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{hyperref}
+\usepackage{tabularx}
+
+\title{Stabbing the ASUS ME571K\_SUB rev1.4}
+\author{Jay Jay Billings, Ph.D.}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Voltages}
+
+**INSERT** Picture of the board with breakout board and pin layout.
+
+\begin{table}[h!]
+\centering
+\begin{tabularx}{ 0.8\textwidth }{ | >{\raggedright\arraybackslash}X | >{\centering\arraybackslash}X | }
+ \hline
+ \multicolumn{2}{|c|}{Pin Voltages} \\
+ \hline
+ Voltage & Pin Number(s) \\
+ G & 6, 9, 18, 23, 28, 35, 36, 38, 40 \\
+ 0V with $R\approx350\Omega$, 31, 39 \\
+ 5V & 10, 11, 12, 13, 14, 15, 16, 17, 18 \\
+ 0.2V-1.6V oscillating & 29, 30, 42 \\
+ \hline
+\end{tabularx}
+\caption{Notable pin voltages for the board. G denotes ground. All unlisted pins had nominal stable voltages $\approx100$mv.}
+\end{table}
+
+\end{document}
